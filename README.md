@@ -8,5 +8,5 @@ TelegramChatId:
 
 For information on how to create a bot on telegram visit: https://core.telegram.org/bots/#how-do-i-create-a-bot
 
-#Usage 
+# Usage 
 java TelegramBot "msg"
