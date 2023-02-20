@@ -40,11 +40,12 @@ public class TelegramBot {
             }
             scanner.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado.");
-            e.printStackTrace();
+            System.out.println("Arquivo 'telegram.conf' não encontrado.");
+            System.exit(1);
+           // e.printStackTrace();
         }
-        if (args.length == 0) {
-            System.err.println("Erro: falta argumento\nTente \'java TelegramBot \"msg\"\'");
+        if (args.length == 0||args.length > 1) {
+            System.err.println("Erro no argumento\nTente:java TelegramBot \"msg\"");
             System.exit(1);
         } else {
             TelegramBot telegramBot = new TelegramBot(telegramBotToken, telegramChatId);
